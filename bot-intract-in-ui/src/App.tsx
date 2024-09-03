@@ -11,7 +11,7 @@ import Login from "./Components/Login";
 
 function App() {
   //Get parametes from URL
-  const params = window.location.href.replace("http://localhost:3000/", "").split("/");
+  const params = window.location.href.replace("https://golive4.onrender.com/", "").split("/");
   console.log(params);
 
   try{
