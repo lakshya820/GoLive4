@@ -206,7 +206,7 @@ async function grammarcorrection(grammarArray, questions) {
      // Iterate over each string in the grammarArray
      for (const grammar of grammarArray) {
          const completion = await openai.chat.completions.create({
-             model: "gpt-3.5-turbo",
+             model: "gpt-4o-mini",
              messages: [
                  {
                      role: "system",
@@ -282,14 +282,14 @@ server.listen(port, () => {
 const encoding = "LINEAR16";
 const sampleRateHertz = 16000;
 const languageCode = "en-US"
-//const alternativeLanguageCodes = ["en-US", "en-IN"];
+const alternativeLanguageCodes = ["en-IN"];
 
 const config = {
   config: {
     encoding: encoding,
     sampleRateHertz: sampleRateHertz,
     languageCode: languageCode,
-    //alternativeLanguageCodes: alternativeLanguageCodes,
+    alternativeLanguageCodes: alternativeLanguageCodes,
     //enableWordTimeOffsets: true,
     enableAutomaticPunctuation: true,
     //enableWordConfidence: true,
@@ -297,13 +297,14 @@ const config = {
     enableSpeakerDiarization: true,  
     minSpeakerCount: 1,  
     //Silence detection
-    //enable_silence_detection: true,
+    enable_silence_detection: true,
     //no_input_timeout: 5,
-    single_utterance : true, //
-    interimResults: true,
+    single_utterance : false, //
+    interimResults: false,
     //diarizationSpeakerCount: 2,
     //model: "video",
-    model: "latest_long",
+    //model: "latest_long",
+    //model: "phone_call",
     //model: "command_and_search",
     useEnhanced: true,
   },
