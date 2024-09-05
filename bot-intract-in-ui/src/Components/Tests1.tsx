@@ -10,7 +10,7 @@ const Tests1: React.FC = () => {
 
     const navigate = useNavigate();
 
-    const handleNavigateToTests2 = () => {
+    const handleNavigateToVoicetest = () => {
         navigate('/voicetest');
       };
 
@@ -32,7 +32,7 @@ const Tests1: React.FC = () => {
                             <p>Duration: 20 mins</p>
                     </div>
                     <div className="card_buttons">
-                            <button className="card_button_start" onClick={handleNavigateToTests2}>Start Test</button>
+                            <button className="card_button_start" onClick={handleNavigateToVoicetest}>Start Test</button>
                             <button className="card_button_cancel">Cancel</button>
                     </div>
                 </div>

@@ -9,9 +9,9 @@ const Dashboard2: React.FC = () => {
     
     const navigate = useNavigate();
 
-    const handleToTests = () => {
+    const handleToVideo = () => {
         // Perform login logic here
-        navigate('/tests1');
+        navigate('/video');
       };
     
     return (
@@ -50,14 +50,14 @@ const Dashboard2: React.FC = () => {
                                 <tr>
                                 <td>1</td>
                                 <td>
-                                    <button className="dashboard_button" onClick={handleToTests}>Voice</button>
+                                    <button className="dashboard_button" onClick={handleToVideo}>Effective Communication</button>
                                 </td>
                                 <td>Upcoming</td>
                                 <td>15/12/2022</td>
                                 <td>NA</td>
                                 <td>Passed</td>
                                 </tr>
-                                <tr>
+                                {/*<tr>
                                 <td>2</td>
                                 <td>
                                     <button className="dashboard_button">Chat</button>
@@ -66,7 +66,7 @@ const Dashboard2: React.FC = () => {
                                 <td>12/22/2023</td>
                                 <td>NA</td>
                                 <td>Passed</td>
-                                </tr>
+                                </tr>*/}
                             </tbody>
                         </table>
                     </div>
