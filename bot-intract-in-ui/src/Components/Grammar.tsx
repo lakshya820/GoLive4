@@ -1,6 +1,7 @@
 import * as io from "socket.io-client";
 import { default as React, useState } from "react";
 import Header from "./Header";
+import { useNavigate } from 'react-router-dom';
 import '../css/Grammar.css';
 
 interface GrammarCorrectionResult {
@@ -12,6 +13,7 @@ interface GrammarCorrectionResult {
 
 const Grammar: React.FC = () => {
   const [grammarCorrectionResult, setGrammarCorrectionResult] = useState<GrammarCorrectionResult | null>(null);
+  const navigate = useNavigate();
 
     const socket = io.connect("https://golive4-server.onrender.com");
 
@@ -20,6 +22,10 @@ const Grammar: React.FC = () => {
       setGrammarCorrectionResult(data);
       console.log('grammaresult:', data);
     });
+
+    const handleSubmittoDashboard= () => {
+      navigate('/main/dashboard');
+    };
 
     return (
         <React.Fragment>
@@ -46,6 +52,7 @@ const Grammar: React.FC = () => {
                     </tbody>
                   </table>
                   <p>Total Correct Percentage: {grammarCorrectionResult.total.toFixed(2)}%</p>
+                  <button className="grammar_next_button" onClick={handleSubmittoDashboard}>HOME</button>
                 </div>
               )}
           </div>

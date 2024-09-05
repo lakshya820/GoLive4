@@ -210,7 +210,7 @@ async function grammarcorrection(grammarArray, questions) {
              messages: [
                  {
                      role: "system",
-                     content: "You will be provided with statements, and your task is to convert them to gramatically correct statements."
+                     content: "You will be provided with statements. If a statement is already grammatically correct (e.g., 'I don't know', 'I've been eating a lot'), do not change it. Only correct statements that have clear grammatical issues."
                  },
                  {
                      role: "user",
