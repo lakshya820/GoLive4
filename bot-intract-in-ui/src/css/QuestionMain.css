@@ -89,26 +89,26 @@
 }
 
 .overlay_button{
-    background-color: grey;
-    width: 150px;
-    height: 50px;
-    border-radius: 5px;
-    font-size: 20px;
-    color: white;
-    border: none;
+  background-color: #5F249F;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  border: none;
 }
 
 .overlay_div{
-    border: 2px solid grey; /* You can adjust the color and width of the border */
-    padding: 10px;          /* Add padding to create some space between the border and the content */
-    border-radius: 5px;
-    width: 60vw;
-    margin: auto;
-    font-size: 18px;
-    background-color: grey;
+  border: 2px solid grey; /* You can adjust the color and width of the border */
+  padding: 10px;          /* Add padding to create some space between the border and the content */
+  border-radius: 5px;
+  width: 60vw;
+  margin: auto;
+  font-size: 18px;
+  background-color: grey;
 }
 
 .exam_note{
-  font: normal normal normal 16px/27px Open Sans, sans-serif;
-  padding-top: 20px;
+font: normal normal normal 16px/27px Open Sans, sans-serif;
+padding-top: 20px;
 }
