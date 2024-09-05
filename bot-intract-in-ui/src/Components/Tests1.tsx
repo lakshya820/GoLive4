@@ -29,7 +29,7 @@ const Tests1: React.FC = () => {
                             <p>The grammar test will assess participants' spoken and written responses for accuracy in tense use, subject-verb agreement, sentence structure, punctuation, and coherence. The focus is on evaluating their ability to construct clear and grammatically correct sentences in real-time.</p>
                     </div>
                     <div className="card_label2">
-                            <p>Duration: 20 mins</p>
+                            <p>Duration: 10 mins</p>
                     </div>
                     <div className="card_buttons">
                             <button className="card_button_start" onClick={handleNavigateToVoicetest}>Start Test</button>

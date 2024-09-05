@@ -8,6 +8,7 @@ import Grammar from "./Components/Grammar";
 import MainLayout from "./Components/MainLayout";
 import Dashboard2 from "./Components/Dashboard2";
 import Login from "./Components/Login";
+import Video from "./Components/Video";
 
 function App() {
   //Get parametes from URL
@@ -41,6 +42,7 @@ function App() {
       <Route path="/" element={<Login />} />
       <Route path="/voicetest" element={<VoiceTest />} />
       <Route path="/grammar" element={<Grammar />} />
+      <Route path="/video" element={<Video />} />
       <Route path="tests1" element={<Tests1 />} />
       <Route path="/main" element={<MainLayout />}>
         <Route path="dashboard" element={<Dashboard2 />} />
