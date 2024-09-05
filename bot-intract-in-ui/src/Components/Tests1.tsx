@@ -23,10 +23,10 @@ const Tests1: React.FC = () => {
                 </div>
                 <div className="tests1_card">
                     <div className="card_header">
-                    <p>Grammar Voice Test</p>
+                    <p>Effective CommunicationTest</p>
                     </div>
                     <div className="card_label1">
-                            <p>The grammar test will assess participants' spoken and written responses for accuracy in tense use, subject-verb agreement, sentence structure, punctuation, and coherence. The focus is on evaluating their ability to construct clear and grammatically correct sentences in real-time.</p>
+                            <p>This test will assess participants' spoken and written responses for accuracy in tense use, subject-verb agreement, sentence structure, punctuation, and coherence. The focus is on evaluating their ability to construct clear and grammatically correct sentences in real-time.</p>
                     </div>
                     <div className="card_label2">
                             <p>Duration: 10 mins</p>

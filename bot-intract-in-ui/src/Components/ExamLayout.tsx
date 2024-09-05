@@ -139,7 +139,7 @@ const ExamLayout: React.FC<MainLayoutProps> = ({children}) => {
         <div className='overlay-content'>
           <div className='overlay-elem'>
             <div className="overlay_div">
-              Warning: Exiting full screen or switching tabs will result in the termination of the exam, and all progress will be lost.
+              <p>Warning: Exiting full screen or switching tabs will result in the termination of the exam, and all progress will be lost.</p>
               <button className='overlay_button' onClick={handleResumeExam}>OK</button></div>
             </div>
           </div>
