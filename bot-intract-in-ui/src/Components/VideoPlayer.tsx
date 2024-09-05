@@ -17,7 +17,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoId }) => {
 
   return (
     <video ref={videoRef} width="1200" height="700" controls autoPlay>
-      <source src={`http://localhost:8081/videos/${videoId}`} type="video/mp4" />
+      <source src={`https://golive4-server.onrender.com/videos/${videoId}`} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   );
