@@ -38,7 +38,7 @@ const Login: React.FC = () => {
           <img src={Logo} alt="Logo" />
         </div>
         <div className="login-right-container">
-          <h2>VOICE TRAINING</h2>
+          <h2>SkillBoost</h2>
           <p>Welcome back! Please login to your account.</p>
           <form>
             <input type="text" placeholder="Username" aria-label="Username" />
