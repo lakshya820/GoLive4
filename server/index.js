@@ -210,7 +210,7 @@ async function grammarcorrection(grammarArray, questions) {
              messages: [
                  {
                      role: "system",
-                     content: "You will be provided with statements. If a statement is already grammatically correct (e.g., 'I don't know', 'I've been eating a lot'), do not change it. Only correct statements that have clear grammatical issues."
+                     content: "You will be provided with statements. If a statement is already grammatically correct (e.g., 'I don't know', 'I've been eating a lot') do not change it.  Do not add any commas even if needed. Accept casual English, including abbreviations and slang. Focus on fixing major grammatical errors like verb tenses, subject-verb agreement, and sentence structure, but leave informal language as it is (e.g., 'I'm gonna', 'wanna', 'LOL')."
                  },
                  {
                      role: "user",
@@ -290,12 +290,12 @@ const config = {
     sampleRateHertz: sampleRateHertz,
     languageCode: languageCode,
     alternativeLanguageCodes: alternativeLanguageCodes,
-    //enableWordTimeOffsets: true,
+    //enableWordTimeOffsets: true,  
     enableAutomaticPunctuation: true,
     //enableWordConfidence: true,
     //Speker deserilization
-    enableSpeakerDiarization: true,  
-    minSpeakerCount: 1,  
+    //enableSpeakerDiarization: true,  
+    //minSpeakerCount: 1,  
     //Silence detection
     enable_silence_detection: true,
     //no_input_timeout: 5,
@@ -303,7 +303,7 @@ const config = {
     interimResults: false,
     //diarizationSpeakerCount: 2,
     //model: "video",
-    //model: "latest_long",
+    model: "latest_long",
     //model: "phone_call",
     //model: "command_and_search",
     useEnhanced: true,
