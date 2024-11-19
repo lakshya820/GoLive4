@@ -1,5 +1,5 @@
 import * as io from "socket.io-client";
-import { default as React, useState } from "react";
+import { default as React, useState, useEffect } from "react";
 import Header from "./Header";
 import { useNavigate } from 'react-router-dom';
 import '../css/Grammar.css';
@@ -13,15 +13,32 @@ interface GrammarCorrectionResult {
 
 const Grammar: React.FC = () => {
   const [grammarCorrectionResult, setGrammarCorrectionResult] = useState<GrammarCorrectionResult | null>(null);
+  const [sentimentResult, setSentimentResult] = useState(null);
+
   const navigate = useNavigate();
 
     const socket = io.connect("https://golive4-server.onrender.com");
 
   
-    socket.on("grammarCorrectionResult", (data: GrammarCorrectionResult) => {
-      setGrammarCorrectionResult(data);
-      console.log('grammaresult:', data);
-    });
+    useEffect(() => {
+      socket.on("grammarCorrectionResult", (data: GrammarCorrectionResult) => {
+        setGrammarCorrectionResult(data);
+        //console.log('grammaresult:', data);
+      });
+  
+      socket.on("lexsentimenttofrontend", (data) => {
+        setSentimentResult(data);
+        console.log('sentimenTresult:', sentimentResult);
+      });
+  
+  
+      
+    //    return () => {
+    //     socket.off("grammarCorrectionResult"); 
+    //     socket.off("lexsentimenttofrontend");// Clean up the event listener
+    //     socket.disconnect(); // Disconnect socket when component unmounts
+    // };
+  }, []);
 
     const handleSubmittoDashboard= () => {
       navigate('/main/dashboard');
@@ -52,6 +69,7 @@ const Grammar: React.FC = () => {
                     </tbody>
                   </table>
                   <p>Total Correct Percentage: {grammarCorrectionResult.total.toFixed(2)}%</p>
+                  <p>Total Correct Percentage: {sentimentResult.toFixed(2)}</p>
                   <button className="grammar_next_button" onClick={handleSubmittoDashboard}>HOME</button>
                 </div>
               )}
