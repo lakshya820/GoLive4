@@ -304,10 +304,12 @@ function sentiment_calc(data){
    console.log("csi: ", (positiveScores[i]-negativeScores[i]-(mixedScores[i]*0.5)));
   }
 
-  final_csi=csi/4;
+  final_csi=(csi/4)*5;
   console.log("final_csi: ", final_csi)
 
-  return final_csi*5
+  return {
+    final_csi
+  }
 }
 
 const port = process.env.PORT || 8081;
